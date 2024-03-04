@@ -80,7 +80,6 @@ class Expense(FFBase, CreateMixin, SelfDeleteMixin, CurrentPeriodUserObjectsMixi
         amount: int,
         category_id: UUID | None = None,
         description: str | None = None,
-
     ) -> None:
         self.id = uuid.uuid4()
         self.profile_id = profile_id

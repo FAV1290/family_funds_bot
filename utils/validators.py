@@ -8,9 +8,9 @@ def is_amount_str_valid(amount_str: str) -> bool:
 def is_category_name_valid(category_name: str, user_categories_names: list[str]) -> bool:
     lowered_categories_names_map = map(str.lower, user_categories_names)
     return all([
-        category_name,
+        category_name.strip(),
         0 < len(category_name) <= 64,
-        category_name.lower() not in lowered_categories_names_map,
+        category_name.strip().lower() not in lowered_categories_names_map,
     ])
 
 
